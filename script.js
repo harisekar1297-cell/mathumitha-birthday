@@ -12,11 +12,17 @@ const photos = [
 
 let i = 0;
 
+// Slideshow
 setInterval(() => {
   i = (i + 1) % photos.length;
   document.getElementById("slideshow").src = photos[i];
 }, 2500);
 
+// Beautiful Popup
 function showMessage() {
-  alert("Happy Birthday Mathumitha ❤️🎉\nWishing you a life filled with happiness, love, and endless smiles!");
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
 }
